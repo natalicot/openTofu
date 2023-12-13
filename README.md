@@ -71,14 +71,15 @@ resource "aws_instance" "web" {
 
 ## Workflow
 
-### Switching to Terraform
+### Using to Terraform
 
 Initialize the Terraform configuration with workspace support:
 
 ```
 
-terraform workspace new default
 terraform init
+terraform workspace list
+terraform workspace new dev
 
 ```
 
@@ -97,8 +98,8 @@ Initialize OpenTofu configuration with workspace support:
 
 ```
 
-tofu workspace new default
 tofu init
+tofu workspace list
 
 ```
 
@@ -108,6 +109,16 @@ Plan and apply the configuration:
 
 tofu plan
 tofu apply
+tofu destroy
+
+```
+
+Set an alias:
+
+```
+
+alias tf=tofu
+tf plan
 
 ```
 
