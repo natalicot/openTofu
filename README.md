@@ -21,7 +21,7 @@ Check the installed versions:
 ```
 
 terraform version
-opentofu version
+tofu version
 
 ```
 
